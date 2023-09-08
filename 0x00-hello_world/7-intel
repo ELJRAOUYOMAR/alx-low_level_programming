@@ -1,0 +1,16 @@
+#!/bin/bash
+# This script generates Intel syntax assembly code from a C file.
+
+# Check if the C file name is provided
+if [ -z "$CFILE" ]; then
+    echo "Usage: export CFILE=<your_c_file.c>"
+    exit 1
+fi
+
+# Extract the base name of the C file (excluding the extension)
+BASENAME="${CFILE%.c}"
+
+# Generate the Intel syntax assembly code
+gcc -S -masm=intel "$CFILE" -o "${BASENAME}.s"
+
+echo "Intel syntax assembly code has been generated in ${BASENAME}.s"
