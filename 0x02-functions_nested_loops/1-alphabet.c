@@ -5,11 +5,10 @@ include "main.h"
 */
 void print_alphabet(void)
 {
-char letter='a';
-while(letter<='z')
+int i;
+for(i=97,i<=122;i++)
 {
-_putchar(letter);
-letter++;
+_putchar(i);
 }
-_putchar('\n')
+_putchar('\n');
 }
