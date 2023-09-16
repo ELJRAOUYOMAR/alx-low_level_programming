@@ -15,7 +15,7 @@ int n;
 srand(time(0));
 
 /* Generate a random number between INT_MIN and INT_MAX */
-n = rand();
+n = rand() - RAND_MAX / 2;
 
 /* Check if n is positive, negative, or zero, and print the result */
 if (n > 0)
