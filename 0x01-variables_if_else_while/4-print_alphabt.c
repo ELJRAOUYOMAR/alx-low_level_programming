@@ -1,24 +1,24 @@
 #include <stdio.h>
 
 /**
-* main - Entry point , Lower and upper letters except q and e
+* main - Entry point
 *
 * Return: Always 0 (Success)
 */
-
 int main(void)
 {
-char lowercase = 'a';
-while(lowercase <= 'z')
-{
-if (lowercase != 'e' && lowercase != 'q')
-{
-putchar(lowercase);
-}
-lowercase++;
-}
-putchar("\n");
+char letter = 'a';
 
-return(0);
+while (letter <= 'z')
+{
+if (letter != 'e' && letter != 'q')
+{
+putchar(letter);
+}
+letter++;
+}
 
+putchar('\n');
+
+return (0);
 }
