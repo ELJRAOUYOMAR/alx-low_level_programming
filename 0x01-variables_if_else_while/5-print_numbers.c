@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*
-* main - Entry point ,All single digits of base 10 .
+/**
+* main - Entry point, prints all single digits of base 10.
 *
 * Return: Always 0 (Success)
 */
@@ -11,7 +11,7 @@ int n = 0;
 
 while (n <= 9)
 {
-printf("%d" , n);
+printf("%d", n);
 n++;
 }
 
