@@ -1,27 +1,40 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
  * main - Entry point
  *
+ * Description: Prints the first 98 Fibonacci numbers separated by comma and space.
+ * The numbers should be separated by comma, followed by a space ,
+ *You are allowed to use the standard library
+ *You are not allowed to use any other library (You can’t use GMP etc…)
+ *You are not allowed to use long long, malloc, pointers, arrays/tables, or structures
+ *You are not allowed to hard code any Fibonacci number (except for 1 and 2)
+Repo:
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-unsigned long int a = 1, b = 2, c;
-int count;
+    int a = 1, b = 2;
+    int count = 2; /* Start with 2 since we already have 1 and 2 */
 
-printf("%lu, %lu", a, b);
+    printf("%d, %d, ", a, b);
 
-for (count = 2; count < 98; count++)
-{
-c = a + b;
-printf(", %lu", c);
-a = b;
-b = c;
-}
+    while (count < 98)
+    {
+        /* Calculate the next Fibonacci number */
+        int next = a + b;
 
-printf("\n");
+        /* Print the number with comma and space */
+        printf("%d, ", next);
 
-return (0);
+        /* Update variables for the next iteration */
+        a = b;
+        b = next;
+        count++;
+    }
+
+    printf("\n");
+
+    return (0);
 }
