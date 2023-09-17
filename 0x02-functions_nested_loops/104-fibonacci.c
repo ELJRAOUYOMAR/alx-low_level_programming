@@ -1,42 +1,30 @@
-/*
-* C program to find and print the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line,
-* with the numbers separated by comma, followed by a space, without using long long, malloc, pointers, arrays/tables, structures, or hard coding any Fibonacci number (except for 1 and 2),
-* and following the betty style, printing only positive Fibonacci numbers.
-*/
-
 #include <stdio.h>
 
+/**
+* main - Entry point for the Fibonacci program.
+*
+* Return: Always 0.
+*/
 int main(void)
 {
-int fib1 = 1;
-int fib2 = 2;
-int fib3;
+int count, n1 = 1, n2 = 2, next;
 
-printf("%d, %d", fib1, fib2);
+printf("%d, %d, ", n1, n2);  // Print the first two Fibonacci numbers
 
-// Iterate from 3 to 98, printing the Fibonacci number at each step, but only if it is positive.
-for (int i = 3; i <= 98; i++)
+for (count = 2; count < 98; count++)
 {
-fib3 = fib1 + fib2;
-
-// Check if the Fibonacci number is negative.
-if (fib3 < 0)
+next = n1 + n2;
+if (next > 0)
 {
-// Skip the rest of the loop iteration.
-continue;
+if (count < 97)
+printf("%d, ", next);  // Print intermediate positive Fibonacci numbers
+else
+printf("%d\n", next);  // Print the last positive Fibonacci number with a newline
+}
+n1 = n2;
+n2 = next;
 }
 
-// Print the Fibonacci number, followed by a comma and a space.
-printf(", %d", fib3);
-
-// Update the previous two Fibonacci numbers.
-fib1 = fib2;
-fib2 = fib3;
-}
-
-// Print a new line at the end.
-printf("\n");
-
-return 0;
+return (0);
 }
 
