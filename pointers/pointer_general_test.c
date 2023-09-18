@@ -30,3 +30,15 @@ int main(void)
    printf("Value of '*pp': %d ('%c')\n", *pp, *pp);
    return (0);
 }
+
+//The output is 
+// Value of 'c': 72 ('H')
+// Address of 'c': 0x7ffe57e9cc7b
+// Value of 'pp': 0x7ffe57e9cc7b
+// Value of 'n': 98
+// Address of 'n': 0x7ffe57e9cc7c
+// Value of 'p': 0x7ffe57e9cc7c
+// Value of 'n': 402
+// Value of '*pp': 111
+// Value of 'c': 111 ('o')
+// Value of '*pp': 111 ('o')
