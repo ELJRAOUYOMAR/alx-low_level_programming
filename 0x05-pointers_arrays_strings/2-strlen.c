@@ -17,6 +17,6 @@ length++; // Increment the length
 s++;      // Move to the next character in the string
 }
 
-return length;
+return (length);
 }
 
