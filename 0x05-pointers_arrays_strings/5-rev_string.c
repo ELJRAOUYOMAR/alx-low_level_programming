@@ -15,8 +15,7 @@ while (s[length] != '\0')
 length++;
 }
 
-int i;
-for (i = 0; i < length / 2; i++)
+for (int i = 0; i < length / 2; i++)
 {
 /* Swap characters from the beginning and end of the string */
 char temp = s[i];
