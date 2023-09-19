@@ -13,7 +13,7 @@ for (i = 0; i < n; i++)
 {
 printf("%d", a[i]);
 
-if (i < n - 1) // Print a comma and space for all elements except the last one
+if (i < n - 1) 
 printf(", ");
 }
 
