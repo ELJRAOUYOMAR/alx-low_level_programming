@@ -6,8 +6,6 @@
 */
 void rev_string(char *s)
 {
-if (s == NULL)
-return;
 
 int length = 0;
 int i;
