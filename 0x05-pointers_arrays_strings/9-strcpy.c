@@ -18,8 +18,7 @@ dest++;
 src++;
 }
 
-/*  Add the null terminator to the destination string */
-*dest = '\0'; 
-return copy;
+*dest = '\0'; /* Add the null terminator to the destination string */
+return (copy); /* Use parentheses for the return statement */
 }
 
