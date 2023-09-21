@@ -17,5 +17,6 @@ void print_array(int *a, int n);
 void print_array(int *a, int n);
 int _atoi(char *s);
 char *_strcpy(char *dest, char *src);
+char *cap_string(char *);
 
 #endif /* MAIN_H */
