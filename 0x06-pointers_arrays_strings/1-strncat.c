@@ -27,8 +27,5 @@ i++;
 dest_len++;
 }
 
-/* Null-terminate the resulting string */
-dest[dest_len] = '\0';
-
 return dest;
 }
