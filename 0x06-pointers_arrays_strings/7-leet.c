@@ -1,10 +1,12 @@
 #include "main.h"
 
 /**
+* 
 * leet - encodes a string into 1337.
 * @str: The input string to be encoded.
 *
 * Return: Pointer to the modified string.
+* 
 */
 char *leet(char *str)
 {
@@ -26,4 +28,3 @@ break;
 
 return str;
 }
-
