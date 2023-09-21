@@ -8,19 +8,18 @@
 */
 char *rot13(char *str)
 {
-int i;
+int i, j;
+char leet_chars[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char leet_replacements[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 for (i = 0; str[i] != '\0'; i++)
 {
-if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+for (j = 0; leet_chars[j] != '\0'; j++)
 {
-if ((str[i] >= 'A' && str[i] <= 'M') || (str[i] >= 'a' && str[i] <= 'm'))
+if (str[i] == leet_chars[j])
 {
-str[i] += 13;
-}
-else
-{
-str[i] -= 13;
+str[i] = leet_replacements[j];
+break;
 }
 }
 }
