@@ -5,6 +5,7 @@
 *
 * Return: 0 if the strings are equal, a positive value if s1 > s2, and a negative value if s1 < s2.
 */
+
 int _strcmp(char *s1, char *s2)
 {
 while (*s1 && *s2 && *s2 == *s1)
