@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 int n;
@@ -11,10 +16,10 @@ p = &n;
 /*
 * Add one line of code here...
 * Remember:
-* - you are not allowed to use a
-* - you are not allowed to modify p
-* - only one statement
-* - you are not allowed to code anything else than this line of code
+* - You are not allowed to use 'a'
+* - You are not allowed to modify 'p'
+* - Only one statement
+* - You are not allowed to code anything else than this line of code
 */
 *(p + 5) = 98;  /* This line sets n to 98 without using 'a' or modifying 'p' */
 /* ...so that this prints 98\n */
