@@ -19,5 +19,4 @@ a[right] = tmp;
 left++;
 right--;
 }
-
 }
