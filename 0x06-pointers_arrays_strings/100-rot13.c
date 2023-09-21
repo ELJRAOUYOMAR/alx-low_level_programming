@@ -14,14 +14,13 @@ for (i = 0; str[i] != '\0'; i++)
 {
 if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
 {
-if ((str[i] >= 'A' && str[i] <= 'Z' && str[i] <= 'M') ||
-(str[i] >= 'a' && str[i] <= 'z' && str[i] <= 'm'))
+if ((str[i] >= 'A' && str[i] <= 'M') || (str[i] >= 'a' && str[i] <= 'm'))
 {
-str[i] = str[i] + 13;
+str[i] += 13;
 }
 else
 {
-str[i] = str[i] - 13;
+str[i] -= 13;
 }
 }
 }
