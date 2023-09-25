@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
     int i;
 
     /* Iterate through the string */
-    for (i = 0; s[i] >= '\0'; i++)
+    for (i = 0; s[i] != '\0'; i++)
     {
         /* Check if the current character matches the target character */
         if (s[i] == c)
