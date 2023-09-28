@@ -15,11 +15,13 @@ if (*s2 == '*')
 if (*(s2 + 1) == '\0')
 return (1);
 
-/* If * is followed by a character, recursively compare s1 with s2, skipping one character in s1 */
+/* If * is followed by a character, */ 
+/* recursively compare s1 with s2, skipping one character in s1 */
 if (wildcmp(s1, s2 + 1))
 return (1);
 
-/* If * is not the last character, recursively compare s1 with s2, skipping one character in s2 */
+/* If * is not the last character, */ 
+/* recursively compare s1 with s2, skipping one character in s2 */
 if (*s1 != '\0' && wildcmp(s1 + 1, s2))
 return (1);
 
