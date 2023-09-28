@@ -14,8 +14,10 @@ void _print_rev_recursion(char *s)
 		return;  /* Base case: end of string reached */
 	}
 
-	_print_rev_recursion(s + 1);  /* Recursively call the function with the next character */
+	/* Recursively call the function with the next character */
+	_print_rev_recursion(s + 1);
 
-	_putchar(*s);  /* Print the current character after the recursive call */
+	/* Print the current character after the recursive call */
+	_putchar(*s);
 }
 
