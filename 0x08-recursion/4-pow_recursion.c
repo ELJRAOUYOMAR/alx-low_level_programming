@@ -10,19 +10,16 @@
  */
 int _pow_recursion(int x, int y)
 {
-    /* Base case: If y is negative, return -1 */
-    if (y < 0)
-    {
-        return -1;
-    }
+	if (y < 0)
+	{
+		return (-1); /* Error: y is negative */
+	}
 
-    /* Base case: If exponent is 0, return 1 */
-    if (y == 0)
-    {
-        return 1;
-    }
+	if (y == 0)
+	{
+		return (1); /* Base case: x^0 is 1 */
+	}
 
-    /* Recursive case: Multiply x by x raised to the power of y-1 */
-    return x * _pow_recursion(x, y - 1);
+	return (x * _pow_recursion(x, y - 1)); /* Recursive case */
 }
 
