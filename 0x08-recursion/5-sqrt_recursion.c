@@ -9,7 +9,6 @@
  */
 int _sqrt_recursion(int n)
 {
-    int i;  
     /* Base case: if n is negative, there is no natural square root */
     if (n < 0)
     {
@@ -22,20 +21,31 @@ int _sqrt_recursion(int n)
         return n;
     }
 
-    
-    /* Check for the square root in the range [1, n/2] using recursion */
-    for (i = 1; i <= n / 2; i++)
+    /* Recursive case: Check for the square root in the range [1, n/2] */
+    int result = check_square_root(n, 1);
+    return result;
+}
+
+/**
+ * check_square_root - A recursive function to perform binary search for the square root.
+ * @n: The number for which to find the square root.
+ * @i: The current search value.
+ *
+ * Return: The natural square root of n.
+ *         If n does not have a natural square root, return -1.
+ */
+int check_square_root(int n, int i)
+{
+    if (i * i == n)
     {
-        if (i * i == n)
-        {
-            return i;  /* Found the square root */
-        }
-        else if (i * i > n)
-        {
-            break;  /* Square root cannot be found in the remaining range */
-        }
+        return i;  /* Found the square root */
+    }
+    else if (i * i > n)
+    {
+        return -1;  /* Square root cannot be found in the remaining range */
     }
 
-    return -1;  /* No natural square root found */
+    /* Recursive case: continue the search */
+    return check_square_root(n, i + 1);
 }
 
