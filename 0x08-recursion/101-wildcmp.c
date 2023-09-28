@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * wildcmp - Compares two strings considering the special character *.
- * @s1: The first string.
- * @s2: The second string with the special character *.
- *
- * Return: 1 if the strings can be considered identical, 0 otherwise.
- */
+* wildcmp - Compares two strings considering the special character *.
+* @s1: The first string.
+* @s2: The second string with the special character *.
+*
+* Return: 1 if the strings can be considered identical, 0 otherwise.
+*/
 int wildcmp(char *s1, char *s2)
 {
 if (*s2 == '*')
@@ -15,12 +15,12 @@ if (*s2 == '*')
 if (*(s2 + 1) == '\0')
 return (1);
 
-/* If * is followed by a character, */ 
+/* If * is followed by a character, */
 /* recursively compare s1 with s2, skipping one character in s1 */
 if (wildcmp(s1, s2 + 1))
 return (1);
 
-/* If * is not the last character, */ 
+/* If * is not the last character, */
 /* recursively compare s1 with s2, skipping one character in s2 */
 if (*s1 != '\0' && wildcmp(s1 + 1, s2))
 return (1);
