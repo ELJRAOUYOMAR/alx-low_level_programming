@@ -13,6 +13,7 @@ int _strlen_recursion(char *s)
         return (0);  /* Base case: end of string reached */
     }
 
-    return (1 + _strlen_recursion(s + 1));  /* Recursively call the function with the next character */
+    /* Recursively call the function with the next character */
+    return (1 + _strlen_recursion(s + 1));  
 }
 
