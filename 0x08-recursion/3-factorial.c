@@ -4,7 +4,8 @@
  * factorial - Returns the factorial of a given number.
  * @n: The number for which to calculate the factorial.
  *
- * Return: The factorial of the number. If n is lower than 0, return -1 (error).
+ * Return: The factorial of the number.
+ * If n is lower than 0, return -1 (error).
  */
 int factorial(int n)
 {
