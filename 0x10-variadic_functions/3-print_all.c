@@ -37,6 +37,7 @@ default:
 i++;
 continue;
 }
+sep = ", ";
 if (format[i + 1])
 printf("%s", sep);
 i++;
