@@ -38,17 +38,8 @@ int main(int ac, char **av)
         exit(99);
     }
 
-    do
+    while ((rd = read(fd_from, buf, BUF_SIZE)) > 0)
     {
-        rd = read(fd_from, buf, BUF_SIZE);
-        if (rd == -1)
-        {
-            dprintf(2, "Error: Can't read from file %s\n", av[1]);
-            close(fd_from);
-            close(fd_to);
-            exit(98);
-        }
-
         wr = write(fd_to, buf, rd);
         if (wr == -1 || wr != rd)
         {
@@ -57,7 +48,15 @@ int main(int ac, char **av)
             close(fd_to);
             exit(99);
         }
-    } while (rd == BUF_SIZE);
+    }
+
+    if (rd == -1)
+    {
+        dprintf(2, "Error: Can't read from file %s\n", av[1]);
+        close(fd_from);
+        close(fd_to);
+        exit(98);
+    }
 
     if (close(fd_from) == -1 || close(fd_to) == -1)
     {
